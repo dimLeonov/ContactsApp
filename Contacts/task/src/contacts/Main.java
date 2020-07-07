@@ -1,8 +1,11 @@
 package contacts;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
+    public ArrayList<Contact> contacts = new ArrayList<Contact>();
+    Contact contact;
 
     private Scanner scanner;
     private String name;
@@ -42,14 +45,28 @@ public class Main {
             case "exit":
                 System.out.println("Exit operation");
                 break;
+            default:
+                System.out.println("wrong message");
+                actionSelector();
         }
 
     }
 
     private void add() {
+        System.out.println("Enter the name: ");
+        String name = scanner.next();
+        System.out.println("Enter the surnam: ");
+        String surname = scanner.next();
+        System.out.println("Enter the number");
+        String number = scanner.next();
+        contacts.add(new Contact(name,surname,number));
+        System.out.println("Record is added");
     }
 
     private void list() {
+        for (Contact contact : contacts) {
+            System.out.println(contact.getName() + " " + contact.getSurname() + " " + contact.getNumber());
+        }
 
     }
 
