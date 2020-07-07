@@ -238,6 +238,9 @@ files:
 - name: src/contacts/Contact.java
   visible: true
   learner_created: true
+- name: src/contacts/ContactAppFunctionality.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/43/stages/229/implement
 status: Failed
 record: -1

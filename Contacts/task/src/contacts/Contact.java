@@ -1,16 +1,20 @@
 package contacts;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Contact {
 
     private String name;
     private String surname;
-    private String number;
+    private String phoneNumber;
+
 
 
     public Contact(String name, String surname, String number){
     this.name = name;
     this.surname = surname;
-    this.number = number;
+    this.phoneNumber = number;
     }
 
     public void setName(String name) {
@@ -22,7 +26,10 @@ public class Contact {
     }
 
     public void setNumber(String number) {
-        this.number = number;
+
+            this.phoneNumber = number;
+
+        System.out.println("Incorrect format");
     }
 
     public String getName() {
@@ -34,7 +41,7 @@ public class Contact {
     }
 
     public String getNumber() {
-        return number;
+        return phoneNumber;
     }
 
 }
