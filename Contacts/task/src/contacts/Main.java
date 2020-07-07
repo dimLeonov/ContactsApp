@@ -8,9 +8,6 @@ public class Main {
     Contact contact;
 
     private Scanner scanner;
-    private String name;
-    private String surname;
-    private String number;
 
     public void actionSelector() {
         System.out.println("Enter Action (add, remove, edit, count, list, exit):");
@@ -70,14 +67,12 @@ public class Main {
 
     }
 
-    private void exit() {
-
-    }
     private void remove() {
+
 
     }
     private void count() {
-
+        System.out.println("The phone Book has " + contacts.size() + " records");
     }
     private void edit() {
 
