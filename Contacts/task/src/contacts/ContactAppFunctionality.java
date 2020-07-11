@@ -7,11 +7,11 @@ public class ContactAppFunctionality {
     public ArrayList<Contact> contacts = new ArrayList<Contact>(); //Хранилище
     final int i = 1; //статическая переменая для нумерования
 
-    private Scanner scanner; //Сканнер для инпутов
+    private Scanner scanner = new Scanner(System.in); //Сканнер для инпутов
 
     public void actionSelector() { //Выбор действия
         System.out.println("Enter Action (add, remove, edit, count, list, exit):");
-        scanner = new Scanner(System.in);
+        ;
         String operation = scanner.next();
         switch (operation){
             case "add":
@@ -135,3 +135,4 @@ public class ContactAppFunctionality {
 
     }
 }
+
